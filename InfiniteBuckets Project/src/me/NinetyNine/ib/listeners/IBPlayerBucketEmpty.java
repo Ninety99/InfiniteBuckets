@@ -100,6 +100,19 @@ public class IBPlayerBucketEmpty implements Listener {
 		else
 			z = block.getLocation().clone().getBlockZ();
 
+		//I originally had
+		/* 
+		 * int x = block.getLocation().clone().getBlockX(); 
+		 * int y = block.getLocation().clone().getBlockY() + 1; 
+		 * int z = block.getLocation().clone().getBlockZ();
+		 * 
+		 * Location bLoc = new Location(x, y, z);
+		 * 
+		 * I tried that when I just right clicked on the ground, not on a blocks' side.
+		 * Then, I was wondering what would happen if I do that, I tried it and it
+		 * spawned water above the block that I right clicked
+		 */
+
 		Location bLoc = new Location(block.getWorld(), x, y, z);
 		if (isWater)
 			bLoc.getBlock().setType(Material.WATER);
