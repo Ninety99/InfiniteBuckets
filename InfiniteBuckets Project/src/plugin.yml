@@ -1,0 +1,11 @@
+name: InfiniteBuckets
+version: 1.0
+main: me.NinetyNine.ib.InfiniteBuckets
+author: NinetyNine
+depend: [Vault]
+description: An infinite bucket use project
+commands:
+  infibucket:
+    usage: /<command>
+    aliases: [ib]
+    description:
