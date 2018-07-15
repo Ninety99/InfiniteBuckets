@@ -22,6 +22,7 @@ public class InfiniteBuckets extends JavaPlugin {
 		registerListeners();
 		registerCommands();
 		IBConfig.loadConfig();
+		IBConfig.save();
 		IBUtils.sendCons("Enabled");
 	}
 	

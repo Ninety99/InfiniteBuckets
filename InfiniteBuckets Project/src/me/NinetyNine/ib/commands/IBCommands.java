@@ -49,7 +49,8 @@ public class IBCommands implements Listener, CommandExecutor {
 
 					if (args.length == 2) {
 						if (IBUtils.isInt(args[1])) {
-							IBConfig.set("price", args[1]);
+							int number = Integer.parseInt(args[1]);
+							IBConfig.set("price", number);
 							sender.sendMessage(IBUtils.format("&aSuccessfully set price to: " + args[1] + "!"));
 							return true;
 						} else {
@@ -72,7 +73,8 @@ public class IBCommands implements Listener, CommandExecutor {
 
 					if (args.length == 2) {
 						if (IBUtils.isInt(args[1])) {
-							IBConfig.set("pricePerUse", args[1]);
+							int number = Integer.parseInt(args[1]);
+							IBConfig.set("pricePerUse", number);
 							sender.sendMessage(IBUtils.format("&aSuccessfully set price per use to: " + args[1] + "!"));
 							return true;
 						} else {
@@ -98,10 +100,10 @@ public class IBCommands implements Listener, CommandExecutor {
 
 						inventory.setItem(3,
 								IBUtils.createItem(true, "&bWater Bucket", lore, Enchantment.ARROW_INFINITE, 1));
-						
+
 						inventory.setItem(5,
 								IBUtils.createItem(false, "&bLava Bucket", lore, Enchantment.ARROW_INFINITE, 1));
-						
+
 						player.openInventory(inventory);
 						return true;
 					} else
@@ -134,7 +136,8 @@ public class IBCommands implements Listener, CommandExecutor {
 
 						if (args.length == 2) {
 							if (IBUtils.isInt(args[1])) {
-								IBConfig.set("price", args[1]);
+								int number = Integer.parseInt(args[1]);
+								IBConfig.set("price", number);
 								player.sendMessage(IBUtils.format("&aSuccessfully set price to: " + args[1] + "!"));
 								return true;
 							} else {
@@ -161,7 +164,8 @@ public class IBCommands implements Listener, CommandExecutor {
 
 						if (args.length == 2) {
 							if (IBUtils.isInt(args[1])) {
-								IBConfig.set("pricePerUse", args[1]);
+								int number = Integer.parseInt(args[1]);
+								IBConfig.set("pricePerUse", number);
 								player.sendMessage(
 										IBUtils.format("&aSuccessfully set price per use to: " + args[1] + "!"));
 								return true;
